@@ -31,7 +31,9 @@ milestone in achieving more efficient searches.
 
 Given a board position, generate an appropriate visual representation (e.g. 1 or more PNG images) that encodes the salient features, then send through a perceptual hash function to generate a string that serves as the "signature"
 
-## Example
+## Example Posotions
+
+*(Note, in retrospect, this isn't the greatest example set, since there's a bishop mobility difference, but it still illustrates the approach)*
 
 Suppose a game begins: 
 ```
