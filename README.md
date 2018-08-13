@@ -43,3 +43,16 @@ Suppose a game begins:
 And now the computer, playing white, wishes to consider whether any of the moves `{3. a3, 3. b3, 3. Bb5}` are similar to each other.
 
 ![images/ruy_candidates.png](images/ruy_candidates.png)
+
+### Visually encoding positions
+Each piece is encoded by a color.
+
+Note: There is no need to distinguish individual pawns or the kingside versus queenside knight, since swapping two pawns results in a perceptually-identical board. 
+
+Also note: The hash function does not need to know the meaning of the colors. The scope of this project is not position evaluation, only whether two positions are significantly different. In most cases (beginning & middle game), moving a major pieces will result in a significantly different board (reflected in the attack & defense encodings below) regardless of whether it was a knight or bishop that was moved. The color --> piece legend/key is superfluous information for this task.
+
+(Note, pieces overlaid on the color charts are simply for convenience scanning the README)
+
+![images/attack_rep.png](images/attack_rep.png)
+
+
