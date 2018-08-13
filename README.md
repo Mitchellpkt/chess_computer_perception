@@ -109,6 +109,6 @@ On the other hand, each representation could be hashed separately (first 8 x 8 p
 
 1: Converting an 8 x 8 board into an image, to be read in by a hash function and downsampled to an 8 x 8 matrix includes a slightly unnecessary detour. A more direct approach would be to modify a perceptual hash library to directly accept numeric matrices encoding the various features.
 
-`FEN (board position) --> numeric matrices encoding various features --> perceptual hash fxn --> signature`
+*FEN (board position) --> numeric matrices encoding above features --> perceptual hash fxn --> signature*
 
 2: In the strict scope of this project (determining the similarity of positions that result from various candidate moves, for pruning purposes), hashing the position is unnecessary. The positions being compared will always be similar-ish, with one piece being moved; demonstrating this with a hash is unnecessary. The action is all in the hash representations of other components.
