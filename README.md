@@ -3,10 +3,9 @@ A curious method for creating computational chess intuition for "similar" positi
 
 ## Motivation 
 
-This project is inspired by Matthew Lei's paper [Giraffe: Using Deep Reinforcement Learning to Play Chess](https://arxiv.org/abs/1509.01549) - specificially section 7.1.4 under 'Future Work'
+This project is inspired by Matthew Lei's paper [Giraffe: Using Deep Reinforcement Learning to Play Chess](https://arxiv.org/abs/1509.01549) - specificially section 7.1.4 under 'Future Work':
 
 > ## 7.1 Future Work
-> ...
 > ### 7.1.4    Similarity Pruning
 > Although  Giraffe  already  has  much  smaller  search  trees  than  other  engines  of  similar  strength, they are still many orders of magnitudes larger than what humans can achieve.  One of the causes for the difference is in how accurately positions are evaluated.  When positions are not evaluated accurately, deeper and wider searches are required to compensate.  Closing this gap has been the primary focus of this project.
 >
