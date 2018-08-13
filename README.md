@@ -51,8 +51,23 @@ Note: There is no need to distinguish individual pawns or the kingside versus qu
 
 Also note: The hash function does not need to know the meaning of the colors. The scope of this project is not position evaluation, only whether two positions are significantly different. In most cases (beginning & middle game), moving a major pieces will result in a significantly different board (reflected in the attack & defense encodings below) regardless of whether it was a knight or bishop that was moved. The color --> piece legend/key is superfluous information for this task.
 
-(Note, pieces overlaid on the color charts are simply for convenience scanning the README)
+(Note, pieces overlaid on the color charts are simply for convenience scanning the README
+
+![images/position_rep.png](images/position_rep.png)
+
+
+### Visually encoding attacks
+
+In this rough draft, attacks are represented as such:
+-  Yellow tiles for empty squares being attacked by white (bright yellow = multiple attackers)
+-  Red tiles represent enemy pieces under attack (pale = pawn, bright = piece)
+-  (Border width difference pending removal)
 
 ![images/attack_rep.png](images/attack_rep.png)
 
+### Visually encoding defenses
+-  Yellow represents defended pieces (pale = pawn, bright = piece)
+-  Red reperesents undefended pieces (pale = pawn, bright = piece)
+-  Border width correlates with number of defenders
 
+![images/defenses_rep.png](images/defenses_rep.png)
