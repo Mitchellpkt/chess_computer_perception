@@ -1,6 +1,8 @@
 # chess_computer_perception
 A curious method for creating computational chess intuition for "similar" positions through perceptual heshes (for pruning).
 
+**Beware: The figures for this initial README were created in the wee hours of the morning, and include a few tired mistakes here and there with mis-colored squares. Just ignore those, will be fixed in a future update...**
+
 ## Motivation 
 
 This project is inspired by Matthew Lei's paper [Giraffe: Using Deep Reinforcement Learning to Play Chess](https://arxiv.org/abs/1509.01549) - specificially section 7.1.4 under 'Future Work':
