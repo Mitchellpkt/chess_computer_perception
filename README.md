@@ -72,7 +72,7 @@ Defenses are colored separately from attacks:
 -  Red reperesents undefended pieces (pale = pawn, bright = piece)
 -  Border width correlates with number of defenders
 
-*(Warning: rightmost panel contains some incorrectly-colored squares, whoops. To be fixed)
+*(Warning: rightmost panel contains some incorrectly-colored squares, whoops! To be fixed)*
 
 ![images/defense_rep.png](images/defense_rep.png)
 
