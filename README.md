@@ -96,6 +96,6 @@ On the other hand, each representation could be hashed separately (first 8 x 8 p
 
 ### Notes
 
-Converting an 8 x 8 board into an image, to be read in by a hash function and downsampled to an 8 x 8 matrix includes a slightly unnecessary detour. A more direct approach would be to modify a perceptual hash library to directly accept numeric matrices encoding the various representations.
+Converting an 8 x 8 board into an image, to be read in by a hash function and downsampled to an 8 x 8 matrix includes a slightly unnecessary detour. A more direct approach would be to modify a perceptual hash library to directly accept numeric matrices encoding the various features.
 
 FEN (board position) --> numeric matrices encoding various features --> perceptual hash --> signature
