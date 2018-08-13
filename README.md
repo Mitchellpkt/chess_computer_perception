@@ -17,7 +17,7 @@ This project is inspired by Matthew Lei's paper [Giraffe: Using Deep Reinforceme
 > Being able to accurately predict equivalence between positions and moves, whether using machine learning or other techniques (such as inductive reasoning), is likely going to lead to another major milestone in achieving more efficient searches.
 >
 
-Here is a generally-approachable summary of the overall Giraffe paper by the [MIT Technology Review](https://www.technologyreview.com/s/541276/deep-learning-machine-teaches-itself-chess-in-72-hours-plays-at-international-master/).
+Here is an approachable (less-technical) summary of the arXiv Giraffe paper by the [MIT Technology Review](https://www.technologyreview.com/s/541276/deep-learning-machine-teaches-itself-chess-in-72-hours-plays-at-international-master/).
 
 ## Scope
 
