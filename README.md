@@ -70,4 +70,22 @@ In this rough draft, attacks are represented as such:
 -  Red reperesents undefended pieces (pale = pawn, bright = piece)
 -  Border width correlates with number of defenders
 
-![images/defenses_rep.png](images/defenses_rep.png)
+![images/defense_rep.png](images/defense_rep.png)
+
+Note: tentative application of `dhash` would likely not work great with border width for passing information, so this may need to change. 
+
+### Visually encoding balance
+
+Planned feature - color each square by (# white pieces attacking)-(# block pieces attacking), using shades of blue for winning squares and shades of red for losing squares. Variations could take into account value of the respective pieces. Feel free to add this feature via PR
+
+## Application of perceptual hash
+
+The various repsentations will be presented to the perceptual has function without visual aides of borderlines and piece silhouettes (which would be lost in downsampling).
+
+For example, consider the full representation of position A:
+
+![images/A_only.png](images/A_only.png)
+
+(left to right: positions, attacks, defenses)
+
+![images/comp_rep.png](images/comp_rep.png)
