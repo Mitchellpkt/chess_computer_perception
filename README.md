@@ -89,3 +89,13 @@ For example, consider the full representation of position A:
 (left to right: positions, attacks, defenses)
 
 ![images/comp_rep.png](images/comp_rep.png)
+
+One could combine all of the representations (as above) and feed that entire image through a perceputal hash function. In that case, it would be necessary to take care to tweak the downsampling to a minimum of (8 px * 24 px) instead of the common default (8 px * 8 px).
+
+On the other hand, each representation could be hashed separately (first 8 x 8 positions, then 8 x 8 attacks, etc...) and their strings concatenated. This provides better control for potentially weighting different features as signifying meaningful difference (for example slight variations in the position hash can be interpreted as more significant if there are strong variations in the attack or defense hashes)
+
+### Notes
+
+Converting an 8 x 8 board into an image, to be read in by a hash function and downsampled to an 8 x 8 matrix includes a slightly unnecessary detour. A more direct approach would be to modify a perceptual hash library to directly accept numeric matrices encoding the various representations.
+
+FEN (board position) --> numeric matrices encoding various features --> perceptual hash --> signature
