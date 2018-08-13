@@ -28,7 +28,7 @@ The goal of this project is to generate a "signature" for different positions, s
 
 Given a board position, generate an appropriate visual representation (e.g. 1 or more PNG images) that encodes the salient features, then send through a perceptual hash function to generate a string that serves as the "signature".
 
-Note: The visual depictions as input for image perceptual hashes are a temporary stepping stone for R & D, and are handy for showing the concepts in documentation. Actual implementation will probably skip the intermediate image generation, and simply send the square' numeric values directly into the perceptual hash function. 
+Note: The visual depictions as input for image perceptual hashes are a temporary stepping stone for R & D, and are handy for showing the concepts in documentation. Actual implementation will probably skip the intermediate image generation, and simply send the squares' numeric values directly into the perceptual hash function. 
 
 ## Example Posotions
 
