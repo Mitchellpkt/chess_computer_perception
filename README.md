@@ -1,6 +1,8 @@
 # chess_computer_perception
 A curious method for creating computational chess intuition through perceptual heshes (for pruning)
 
+## Motivation 
+
 This project is inspired by Matthew Lei's paper [Giraffe: Using Deep Reinforcement Learning to Play Chess](https://arxiv.org/abs/1509.01549) - specificially section 7.1.4 under 'Future Work'
 
 ```
@@ -25,3 +27,17 @@ learning or other techniques (such as inductive reasoning), is likely going to l
 milestone in achieving more efficient searches.
 ```
 
+## Approach
+
+Given a board position, generate an appropriate visual representation (e.g. 1 or more PNG images) that encodes the salient features, then send through a perceptual hash function to generate a string that serves as the "signature"
+
+## Example
+
+Suppose a game begins: 
+```
+1. e4 e5
+2. Nf6 Nc6
+```
+And now the computer, playing white, wishes to consider whether any of the moves `{3. a3, 3. b3, 3. Bb5}` are similar to each other.
+
+![images/ruy_candidates.png](images/ruy_candidates.png)
