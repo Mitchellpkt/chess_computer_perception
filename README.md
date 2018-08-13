@@ -1,47 +1,37 @@
 # chess_computer_perception
-A curious method for creating computational chess intuition for "similar" positions through perceptual heshes (for pruning)
+A curious method for creating computational chess intuition for "similar" positions through perceptual heshes (for pruning).
 
 ## Motivation 
 
 This project is inspired by Matthew Lei's paper [Giraffe: Using Deep Reinforcement Learning to Play Chess](https://arxiv.org/abs/1509.01549) - specificially section 7.1.4 under 'Future Work'
 
-```
-7.1.4    Similarity Pruning
-Although  Giraffe  already  has  much  smaller  search  trees  than  other  engines  of  similar  strength,
-they are still many orders of magnitudes larger than what humans can achieve.  One of the causes
-for the difference is in how accurately positions are evaluated.  When positions are not evaluated
-accurately, deeper and wider searches are required to compensate.  Closing this gap has been the
-primary focus of this project.
+> ## 7.1 Future Work
+> ...
+> ### 7.1.4    Similarity Pruning
+> Although  Giraffe  already  has  much  smaller  search  trees  than  other  engines  of  similar  strength, they are still many orders of magnitudes larger than what humans can achieve.  One of the causes for the difference is in how accurately positions are evaluated.  When positions are not evaluated accurately, deeper and wider searches are required to compensate.  Closing this gap has been the primary focus of this project.
+>
+> Another reason for humans’ high search efficiency is the concept of position similarity.  Humans can often decide that some moves are effectively equivalent in some situations, and avoid searching all of them.  This dramatically reduces the average branching factor of search trees.
+>
+> One possible way to implement this using machine learning is to use a neural network that takes positions  as  inputs,  and  outputs  sequences  of  numbers  that  can  work  as  ”signatures”  for  each position.  Unsupervised learning (for example,  clustering) can then be used on the signatures to gauge degrees of similarity between positions.  However,  it is unclear how such networks can be trained.
+>
+> Being able to accurately predict equivalence between positions and moves, whether using machine learning or other techniques (such as inductive reasoning), is likely going to lead to another major milestone in achieving more efficient searches.
+>
 
-Another reason for humans’ high search efficiency is the concept of position similarity.  Humans
-can often decide that some moves are effectively equivalent in some situations, and avoid searching
-all of them.  This dramatically reduces the average branching factor of search trees.
-One possible way to implement this using machine learning is to use a neural network that takes
-positions  as  inputs,  and  outputs  sequences  of  numbers  that  can  work  as  ”signatures”  for  each
-position.  Unsupervised learning (for example,  clustering) can then be used on the signatures to
-gauge degrees of similarity between positions.  However,  it is unclear how such networks can be
-trained.
-
-Being able to accurately predict equivalence between positions and moves, whether using machine
-learning or other techniques (such as inductive reasoning), is likely going to lead to another major
-milestone in achieving more efficient searches.
-```
-
-Here is a more approachable summary of the overall Giraffe paper by the [MIT Technology Review](https://www.technologyreview.com/s/541276/deep-learning-machine-teaches-itself-chess-in-72-hours-plays-at-international-master/)
+Here is a more approachable summary of the overall Giraffe paper by the [MIT Technology Review](https://www.technologyreview.com/s/541276/deep-learning-machine-teaches-itself-chess-in-72-hours-plays-at-international-master/).
 
 ## Scope
 
 The goal of this project is to generate a "signature" for different positions, such that similar positions have similar signatures (as per section 7.1.4). Position evaluation is not currently within scope, which is already nicely tackled with Giraffe.
 
-*(although one could imagine using the signatures, or features selected/extracted from the signatures, as inputs to an evaluation engine. For example, Giraffe might have another block of inputs receiving signature-derived data,  effectively adding a fuzzy-ish memory for recognizing common themes through different positions. There would be redundancy with some of its current input data, so degree of information-content added is unclear.)*
+*(although one could imagine using the signatures, or features selected/extracted from the signatures, as inputs to an evaluation engine. For example, Giraffe might have another block of inputs receiving signature-derived data,  effectively adding a fuzzy-ish memory for recognizing common themes through different positions. There would be redundancy with some of its current input data, so degree of information-content added is unclear).*
 
 ## Approach
 
-Given a board position, generate an appropriate visual representation (e.g. 1 or more PNG images) that encodes the salient features, then send through a perceptual hash function to generate a string that serves as the "signature"
+Given a board position, generate an appropriate visual representation (e.g. 1 or more PNG images) that encodes the salient features, then send through a perceptual hash function to generate a string that serves as the "signature".
 
 ## Example Posotions
 
-*(Note, in retrospect, this isn't the greatest example set, since there's a bishop mobility difference, but it still illustrates the approach)*
+*(Note, in retrospect, this isn't the greatest example set, since there's a dark-square bishop mobility difference, but it still illustrates the approach adequately).*
 
 Suppose a game begins: 
 ```
@@ -72,7 +62,7 @@ Also note: The hash function does not need to know the meaning of the colors. Th
 In this rough draft, attacks are represented as such:
 -  Yellow tiles for empty squares being attacked by white (bright yellow = multiple attackers)
 -  Red tiles represent enemy pieces under attack (pale = pawn, bright = piece)
--  (Border width difference pending removal)
+-  *(Border width difference pending removal)*
 
 ![images/attack_rep.png](images/attack_rep.png)
 
@@ -104,7 +94,7 @@ For example, consider the full representation of position A:
 
 ![images/A_only.png](images/A_only.png)
 
-(left to right: positions, attacks, defenses)
+*(left to right: positions, attacks, defenses)*
 
 ![images/comp_rep.png](images/comp_rep.png)
 
@@ -112,7 +102,7 @@ For example, consider the full representation of position A:
 
 One could combine all of the representations (as above) and feed that entire image through a perceputal hash function. In that case, it would be necessary to take care to tweak the downsampling to a minimum of (8 px * 24 px) instead of the common default (8 px * 8 px).
 
-On the other hand, each representation could be hashed separately (first 8 x 8 positions, then 8 x 8 attacks, etc...) and their strings concatenated. This provides better control for potentially weighting different features as signifying meaningful difference (for example slight variations in the position hash can be interpreted as more significant if there are strong variations in the attack or defense hashes)
+On the other hand, each representation could be hashed separately (first 8 x 8 positions, then 8 x 8 attacks, etc...) and their strings concatenated. This provides better control for potentially weighting different features as signifying meaningful difference (for example slight variations in the position hash can be interpreted as more significant if there are strong variations in the attack or defense hashes).
 
 ### Notes
 
