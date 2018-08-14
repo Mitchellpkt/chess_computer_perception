@@ -1,8 +1,6 @@
 # chess_computer_perception
 A curious method for creating computational chess intuition for "similar" positions through perceptual heshes (for pruning).
 
-**Beware: The figures for this initial README were created in the wee hours of the morning, and include a few tired mistakes here and there with mis-colored squares. Just ignore those, will be fixed in a future update...**
-
 ## Motivation 
 
 This project is inspired by Matthew Lei's paper [Giraffe: Using Deep Reinforcement Learning to Play Chess](https://arxiv.org/abs/1509.01549) - specificially section 7.1.4 under 'Future Work':
@@ -65,7 +63,6 @@ Also note: The hash function does not need to know the meaning of the colors. Th
 In this rough draft, attacks are represented as such:
 -  Yellow tiles for empty squares being attacked by white (bright yellow = multiple attackers)
 -  Red tiles represent enemy pieces under attack (pale = pawn, bright = piece)
--  *(Border width difference pending removal)*
 
 ![images/attack_rep.png](images/attack_rep.png)
 
@@ -74,9 +71,6 @@ In this rough draft, attacks are represented as such:
 Defenses are colored separately from attacks:
 -  Yellow represents defended pieces (pale = pawn, bright = piece)
 -  Red reperesents undefended pieces (pale = pawn, bright = piece)
--  Border width correlates with number of defenders
-
-*(Warning: rightmost panel contains some incorrectly-colored squares, whoops! To be fixed)*
 
 ![images/defense_rep.png](images/defense_rep.png)
 
@@ -95,9 +89,9 @@ The various repsentations will be presented to the perceptual has function witho
 
 ### Example position
 
-For example, consider the full representation of position A:
+For example, consider the full representation of position C:
 
-![images/A_only.png](images/A_only.png)
+![images/C_only.png](images/C_only.png)
 
 *(left to right: positions, attacks, defenses)*
 
