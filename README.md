@@ -22,7 +22,7 @@ Here is an approachable (less-technical) summary of the arXiv Giraffe paper by t
 
 The goal of this project is to generate a "signature" for different positions, such that similar positions have similar signatures (as per section 7.1.4). Position evaluation is not currently within scope, which is already nicely tackled with Giraffe.
 
-*(although one could imagine using the signatures, or features selected/extracted from the signatures, as inputs to an evaluation engine. For example, Giraffe might have another block of inputs receiving signature-derived data,  effectively adding a fuzzy-ish memory for recognizing common themes through different positions. There would be redundancy with some of its current input data, so degree of information-content added is unclear).*
+*(However... One could imagine using the signatures, or features selected/extracted from the signatures, as inputs to an evaluation engine. For example, Giraffe might have another block of inputs receiving signature-derived data,  effectively adding a fuzzy-ish memory for recognizing common themes through different positions. There would be redundancy with some of its current input data, so degree of information-content added is unclear).*
 
 ## Approach
 
