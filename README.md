@@ -64,7 +64,7 @@ In this rough draft, attacks are represented as such:
 -  Yellow tiles for empty squares being attacked by white (bright yellow = multiple attackers)
 -  Red tiles represent enemy pieces under attack (pale = pawn, bright = piece)
 
-![images/attack_rep.png](images/attack_rep.png)
+![images/attack_rep.png](images/attack_rep.pngx)
 
 ### Visually encoding defenses
 
