@@ -55,7 +55,7 @@ Also note: The hash function does not need to know the meaning of the colors. Th
 
 (Also, see note at bottom about irrelevance of the position hash)
 
-![images/position_rep.png](images/position_rep.png)
+![images/position_rep_nc.png](images/position_rep_nc.png)
 
 
 ### Visually encoding attacks
@@ -64,7 +64,7 @@ In this rough draft, attacks are represented as such:
 -  Yellow tiles for empty squares being attacked by white (bright yellow = multiple attackers)
 -  Red tiles represent enemy pieces under attack (pale = pawn, bright = piece)
 
-![images/attack_rep.png](images/attack_rep.pngx)
+![images/attack_rep_nc.png](images/attack_rep_nc.png)
 
 ### Visually encoding defenses
 
@@ -72,7 +72,7 @@ Defenses are colored separately from attacks:
 -  Yellow represents defended pieces (pale = pawn, bright = piece)
 -  Red reperesents undefended pieces (pale = pawn, bright = piece)
 
-![images/defense_rep.png](images/defense_rep.png)
+![images/defense_rep.png](images/defense_rep_nc.png)
 
 Note: tentative application of `dhash` would likely not work great with border width for passing information, so this may need to change. 
 
@@ -95,7 +95,7 @@ For example, consider the full representation of position C:
 
 *(left to right: positions, attacks, defenses)*
 
-![images/comp_rep.png](images/comp_rep.png)
+![images/comp_rep.png](images/comp_rep_nc.png)
 
 ### One hash or multiple?
 
