@@ -41,7 +41,7 @@ Suppose a game begins:
 ```
 And now the computer, playing white, wishes to consider whether any of the moves `{3. a3, 3. b3, 3. Bb5}` are similar to each other.
 
-![images/ruy_candidates.png](images/ruy_candidates.pngx)
+![images/ruy_candidates.png](images/ruy_candidates.png)
 
 ### Visually encoding 
 
@@ -55,7 +55,7 @@ Also note: The hash function does not need to know the meaning of the colors. Th
 
 (Also, see note at bottom about irrelevance of the position hash)
 
-![images/position_rep.png](images/position_rep.pngx)
+![images/position_rep.png](images/position_rep.png)
 
 
 ### Visually encoding attacks
@@ -72,7 +72,7 @@ Defenses are colored separately from attacks:
 -  Yellow represents defended pieces (pale = pawn, bright = piece)
 -  Red reperesents undefended pieces (pale = pawn, bright = piece)
 
-![images/defense_rep.png](images/defense_rep.pngx)
+![images/defense_rep.png](images/defense_rep.png)
 
 Note: tentative application of `dhash` would likely not work great with border width for passing information, so this may need to change. 
 
@@ -95,7 +95,7 @@ For example, consider the full representation of position C:
 
 *(left to right: positions, attacks, defenses)*
 
-![images/comp_rep.png](images/comp_rep.pngx)
+![images/comp_rep.png](images/comp_rep.png)
 
 ### One hash or multiple?
 
